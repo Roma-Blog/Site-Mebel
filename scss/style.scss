@@ -442,6 +442,15 @@ a:hover {
             padding-top: 1vw;
         }
     }
+    .portfolio{
+        &__item{
+
+        }
+        &__img{
+            height: 40vw;
+        }
+    }
+
 }
 @media (max-width: 1000px){
     .header {
@@ -555,6 +564,12 @@ a:hover {
             width: 100%;
         }
     }
+    .portfolio{
+        &__link{
+            font-size: 14px;
+            bottom: 0;
+        }
+    }
 }
 @media (max-width: 720px){
     .cont{
@@ -583,6 +598,23 @@ a:hover {
 
 		&__img-2 {
 		}
+    }
+    .portfolio{
+        &__list{
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 0;
+        }
+        &__item{
+            flex: 0 0 auto;
+            width: 252px;
+            margin-right: 20px;
+        }
+        &__img{
+            height: 328px;
+            width: 252px;
+        }
     }
 }
 @media (max-width: 580px){
