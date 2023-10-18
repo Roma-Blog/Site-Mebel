@@ -313,16 +313,15 @@ a:hover {
   margin-bottom: 38px;
 }
 .reviews__list {
-  display: flex;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .reviews__item {
   border: 1px solid #000;
   max-width: 445px;
   padding: 40px 40px 60px;
   text-align: center;
-}
-.reviews__item + .reviews__item {
-  margin-left: 20px;
 }
 .reviews__item-icon {
   margin-bottom: 36px;
@@ -454,6 +453,15 @@ a:hover {
   .portfolio__img {
     height: 40vw;
   }
+  .reviews__item {
+    padding: 4vw 4vw 6vw;
+  }
+  .order__img {
+    width: 90%;
+  }
+  .order__form {
+    padding-right: 8vw;
+  }
 }
 @media (max-width: 1000px) {
   .header {
@@ -509,6 +517,16 @@ a:hover {
   .worck__item-text {
     width: 60%;
   }
+  .reviews__list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__list-social-network {
+    order: -1;
+  }
   .title-h2 {
     font-size: 32px;
   }
@@ -527,19 +545,19 @@ a:hover {
     font-size: 14px;
     bottom: 0;
   }
-  .reviews__list {
-    flex-wrap: wrap;
+  .order {
+    display: block;
   }
-  .reviews__item + .reviews__item {
-    margin-left: 0;
+  .order__img {
+    display: none;
   }
-  .reviews__item {
-    max-width: 45vw;
+  .order__form {
+    padding-right: 15vw;
   }
 }
 @media (max-width: 720px) {
   .cont {
-    padding: 0 8px;
+    padding: 0 16px;
   }
   .first-screen__title {
     font-size: 32px;
@@ -581,5 +599,14 @@ a:hover {
   }
   .worck__box-right {
     width: 100%;
+  }
+  .reviews__list {
+    grid-template-columns: 1fr;
+  }
+  .reviews__item {
+    max-width: 100%;
+  }
+  .order__form {
+    padding-right: 0;
   }
 }

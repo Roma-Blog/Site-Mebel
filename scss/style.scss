@@ -266,7 +266,9 @@ a:hover {
     }
 
     &__list {
-        display: flex;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     &__item {
@@ -274,9 +276,6 @@ a:hover {
         max-width: 445px;
         padding: 40px 40px 60px;
         text-align: center;
-    }
-    &__item + &__item{
-        margin-left: 20px;
     }
 
     &__item-icon {
@@ -450,7 +449,22 @@ a:hover {
             height: 40vw;
         }
     }
+    .reviews{
+        &__list{
 
+        }
+        &__item{
+            padding: 4vw 4vw 6vw;
+        }
+    }
+    .order{
+        &__img{
+            width: 90%;
+        }
+        &__form{
+            padding-right: 8vw;
+        }
+    }
 }
 @media (max-width: 1000px){
     .header {
@@ -548,6 +562,25 @@ a:hover {
             width: 60%;
         }
     }
+    .reviews{
+        &__list{
+            grid-template-columns: 1fr 1fr;
+        }
+        &__item{
+            
+        }
+    }
+    .order{
+        
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        &__list-social-network{
+            order: -1;
+        }
+    }
+    
     .title-h2{
         font-size: 32px;
     }
@@ -570,21 +603,19 @@ a:hover {
             bottom: 0;
         }
     }
-    .reviews{
-        &__list{
-            flex-wrap: wrap;
+    .order{
+        display: block;
+        &__img{
+            display: none;
         }
-        &__item + &__item {
-            margin-left: 0;
-        }
-        &__item{
-            max-width: 45vw;
+        &__form{
+            padding-right: 15vw;
         }
     }
 }
 @media (max-width: 720px){
     .cont{
-        padding: 0 8px;
+        padding: 0 16px;
     }
     .first-screen {
 
@@ -645,6 +676,19 @@ a:hover {
         }
         &__box-right{
             width: 100%;
+        }
+    }
+    .reviews{
+        &__list{
+            grid-template-columns: 1fr;
+        }
+        &__item{
+            max-width: 100%;
+        }
+    }
+    .order{
+        &__form{
+            padding-right: 0;
         }
     }
 }
