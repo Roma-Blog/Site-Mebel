@@ -403,7 +403,9 @@ a:hover {
     &__social-network-link {
     }
 }
-
+.title-h2{
+    font-size: 48px;
+}
 @media (max-width: 1440px){
 
     .first-screen {
@@ -429,50 +431,19 @@ a:hover {
             width: 100%;
 		}
     }
-}
-@media (max-width: 1000px){
-    .first-screen {
-        grid-template-columns: 1fr;
-        gap: 0;
-		&__title {
-            font-size: 56px;
-            grid-column-start: 1;
-            grid-column-end: -1;
-            grid-row-start: 1;
-            grid-row-end: 2;
-
+    .about-company{
+        &__title{
+            padding-right: 3vw;
         }
-
-		&__text {
-            grid-row-start: 2;
-            grid-row-end: 3;
-		}
-
-		&__order {
-            grid-row-start: 3;
-            grid-row-end: 4;
-		}
-
-		&__order-link {
-		}
-
-		&__img-1 {
-            grid-column-start: 1;
-            grid-column-end: -1;
-            grid-row-start: 4;
-            grid-row-end: 5;
-            height: 500px;
-            object-fit: cover;
-		}
-
-		&__img-2 {
-            display: none;
-		}
+        &__box-left{
+            padding-right: 8%;
+        }
+        &__box-text{
+            padding-top: 1vw;
+        }
     }
 }
-
 @media (max-width: 1000px){
-
     .header {
         align-items: center;
 		&__box-logo {
@@ -516,7 +487,54 @@ a:hover {
 		&__menu-mob-img {
 		}
     }
+    .first-screen {
+        grid-template-columns: 1fr;
+        gap: 0;
+		&__title {
+            font-size: 56px;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+        }
+
+		&__text {
+            grid-row-start: 2;
+            grid-row-end: 3;
+		}
+
+		&__order {
+            grid-row-start: 3;
+            grid-row-end: 4;
+		}
+
+		&__order-link {
+		}
+
+		&__img-1 {
+            grid-column-start: 1;
+            grid-column-end: -1;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            height: 500px;
+            object-fit: cover;
+		}
+
+		&__img-2 {
+            display: none;
+		}
+    }
+    .about-company{
+        &__box-left{
+            padding-right: 0;
+        }
+    }
+    .title-h2{
+        font-size: 32px;
+    }
 }
+
 @media (max-width: 720px){
     .cont{
         padding: 0 8px;
@@ -544,5 +562,16 @@ a:hover {
 
 		&__img-2 {
 		}
+    }
+}
+@media (max-width: 580px){
+    .about-company{
+        display: block;
+        &__title{
+            width: 100%;
+        }
+        &__box-left{
+            width: 100%;
+        }
     }
 }

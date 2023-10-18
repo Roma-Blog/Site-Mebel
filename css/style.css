@@ -428,6 +428,10 @@ a:hover {
 .footer__item-social-network + .footer__item-social-network {
   margin-left: 40px;
 }
+.title-h2 {
+  font-size: 48px;
+}
+
 @media (max-width: 1440px) {
   .first-screen__text {
     margin-bottom: 40px;
@@ -438,8 +442,29 @@ a:hover {
   .first-screen__img-2 {
     width: 100%;
   }
+  .about-company__title {
+    padding-right: 3vw;
+  }
+  .about-company__box-left {
+    padding-right: 8%;
+  }
+  .about-company__box-text {
+    padding-top: 1vw;
+  }
 }
 @media (max-width: 1000px) {
+  .header {
+    align-items: center;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__menu-mob {
+    display: block;
+  }
+  .header__menu-mob-btn {
+    background-color: transparent;
+  }
   .first-screen {
     grid-template-columns: 1fr;
     gap: 0;
@@ -471,19 +496,11 @@ a:hover {
   .first-screen__img-2 {
     display: none;
   }
-}
-@media (max-width: 1000px) {
-  .header {
-    align-items: center;
+  .about-company__box-left {
+    padding-right: 0;
   }
-  .header__menu {
-    display: none;
-  }
-  .header__menu-mob {
-    display: block;
-  }
-  .header__menu-mob-btn {
-    background-color: transparent;
+  .title-h2 {
+    font-size: 32px;
   }
 }
 @media (max-width: 720px) {
@@ -495,5 +512,16 @@ a:hover {
   }
   .first-screen__text {
     font-size: 16px;
+  }
+}
+@media (max-width: 580px) {
+  .about-company {
+    display: block;
+  }
+  .about-company__title {
+    width: 100%;
+  }
+  .about-company__box-left {
+    width: 100%;
   }
 }
