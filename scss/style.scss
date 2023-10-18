@@ -530,11 +530,32 @@ a:hover {
             padding-right: 0;
         }
     }
+    .worck{
+        &__item-title{
+            font-size: 20px;
+            width: 40%;
+        }
+        &__item-text{
+            width: 60%;
+        }
+    }
     .title-h2{
         font-size: 32px;
     }
 }
-
+@media (max-width: 900px){
+    .worck{
+        &__item{
+            display: block;
+        }
+        &__item-title{
+            width: 100%;
+        }
+        &__item-text{
+            width: 100%;
+        }
+    }
+}
 @media (max-width: 720px){
     .cont{
         padding: 0 8px;
@@ -571,6 +592,15 @@ a:hover {
             width: 100%;
         }
         &__box-left{
+            width: 100%;
+        }
+    }
+    .worck{
+        display: block;
+        &__title{
+            width: 100%;
+        }
+        &__box-right{
             width: 100%;
         }
     }

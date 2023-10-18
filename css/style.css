@@ -499,8 +499,26 @@ a:hover {
   .about-company__box-left {
     padding-right: 0;
   }
+  .worck__item-title {
+    font-size: 20px;
+    width: 40%;
+  }
+  .worck__item-text {
+    width: 60%;
+  }
   .title-h2 {
     font-size: 32px;
+  }
+}
+@media (max-width: 900px) {
+  .worck__item {
+    display: block;
+  }
+  .worck__item-title {
+    width: 100%;
+  }
+  .worck__item-text {
+    width: 100%;
   }
 }
 @media (max-width: 720px) {
@@ -522,6 +540,15 @@ a:hover {
     width: 100%;
   }
   .about-company__box-left {
+    width: 100%;
+  }
+  .worck {
+    display: block;
+  }
+  .worck__title {
+    width: 100%;
+  }
+  .worck__box-right {
     width: 100%;
   }
 }
