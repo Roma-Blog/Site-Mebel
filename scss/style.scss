@@ -570,6 +570,17 @@ a:hover {
             bottom: 0;
         }
     }
+    .reviews{
+        &__list{
+            flex-wrap: wrap;
+        }
+        &__item + &__item {
+            margin-left: 0;
+        }
+        &__item{
+            max-width: 45vw;
+        }
+    }
 }
 @media (max-width: 720px){
     .cont{
