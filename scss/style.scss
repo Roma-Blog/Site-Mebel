@@ -666,11 +666,13 @@ a:hover {
             flex-wrap: nowrap;
             overflow-x: auto;
             gap: 0;
+            scroll-snap-type: x mandatory;
         }
         &__item{
             flex: 0 0 auto;
             width: 252px;
             margin-right: 20px;
+            scroll-snap-align: start;
         }
         &__img{
             height: 328px;
