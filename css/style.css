@@ -513,7 +513,7 @@ a:hover {
     padding-right: 0;
   }
   .worck__item-title {
-    font-size: 20px;
+    font-size: 24px;
     width: 40%;
   }
   .worck__item-text {
@@ -526,8 +526,26 @@ a:hover {
     flex-direction: column;
     align-items: center;
   }
-  .footer__list-social-network {
+  .footer__list-link {
     order: -1;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 36px;
+  }
+  .footer__item-link + .footer__item-link {
+    margin-top: 10px;
+  }
+  .footer__list-social-network {
+    order: -2;
+    margin-bottom: 20px;
+  }
+  .footer__copyright {
+    text-align: center;
+  }
+  .footer__item-link + .footer__item-link::before {
+    content: "";
+    padding-left: 0;
   }
   .title-h2 {
     font-size: 32px;
@@ -582,6 +600,9 @@ a:hover {
     height: 328px;
     width: 252px;
   }
+  .portfolio.cont {
+    padding: 0 0 0 16px;
+  }
 }
 @media (max-width: 580px) {
   .header {
@@ -620,6 +641,7 @@ a:hover {
   }
   .about-company {
     display: block;
+    margin-bottom: 57px;
   }
   .about-company__title {
     display: none;
@@ -630,6 +652,7 @@ a:hover {
   }
   .about-company__box-text {
     padding-right: 7px;
+    margin-bottom: 38px;
   }
   .about-company__text + .about-company__text {
     margin-top: 14px;
@@ -637,23 +660,88 @@ a:hover {
   .about-company__box-left {
     width: 100%;
   }
+  .about-company__advantages-list {
+    padding-right: 48%;
+  }
+  .about-company__advantages-item + .about-company__advantages-item {
+    margin-top: 28px;
+  }
+  .about-company__advantages-title {
+    font-size: 24px;
+  }
+  .about-company__advantages-text {
+    padding-top: 2px;
+  }
   .worck {
     display: block;
+    margin-bottom: 48px;
   }
   .worck__title {
     width: 100%;
   }
+  .worck__text {
+    padding-top: 23px;
+    padding-left: 0;
+    margin-bottom: 37px;
+  }
   .worck__box-right {
     width: 100%;
   }
+  .worck__item {
+    padding-bottom: 18px;
+  }
+  .worck__item-title {
+    margin-bottom: 13px;
+  }
+  .portfolio {
+    margin-bottom: 57px;
+  }
+  .portfolio__title {
+    margin-bottom: 22px;
+  }
+  .portfolio__link {
+    font-size: 16px;
+    padding: 14px 12px;
+  }
+  .reviews {
+    margin-bottom: 56px;
+  }
+  .reviews__item {
+    padding: 8vw 8vw 9vw;
+  }
+  .reviews__item-icon {
+    height: 33px;
+  }
+  .reviews__title {
+    margin-bottom: 22px;
+  }
   .reviews__list {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 332px);
+    gap: 16px;
   }
   .reviews__item {
     max-width: 100%;
+    height: 100%;
+  }
+  .order {
+    margin-bottom: 63px;
+  }
+  .order__form-box {
+    padding: 0;
   }
   .order__form {
     padding-right: 0;
+    margin-bottom: 28px;
+  }
+  .order__title {
+    margin-bottom: 23px;
+  }
+  .order__text {
+    margin-bottom: 32px;
+  }
+  .order__input--submit {
+    margin-top: 20px;
   }
   .title-h2 {
     font-size: 28px;

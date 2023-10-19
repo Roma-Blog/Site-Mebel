@@ -556,7 +556,7 @@ a:hover {
     }
     .worck{
         &__item-title{
-            font-size: 20px;
+            font-size: 24px;
             width: 40%;
         }
         &__item-text{
@@ -577,8 +577,26 @@ a:hover {
     .footer{
         flex-direction: column;
         align-items: center;
-        &__list-social-network{
+        &__list-link{
             order: -1;
+            display: block;
+            text-align: center;
+            padding: 0;
+            margin-bottom: 36px;
+        }
+        &__item-link + &__item-link{
+            margin-top: 10px;
+        }
+        &__list-social-network{
+            order: -2;
+            margin-bottom: 20px;
+        }
+        &__copyright{
+            text-align: center;
+        }
+        &__item-link + &__item-link::before {
+            content: "";
+            padding-left: 0;
         }
     }
     
@@ -659,6 +677,9 @@ a:hover {
             width: 252px;
         }
     }
+    .portfolio.cont{
+        padding: 0 0 0 16px;
+    }
 }
 @media (max-width: 580px){
     .header {
@@ -725,6 +746,7 @@ a:hover {
     }
     .about-company{
         display: block;
+        margin-bottom: 57px;
         &__title{
             display: none;
         }
@@ -734,6 +756,7 @@ a:hover {
         }
         &__box-text{
             padding-right: 7px;
+            margin-bottom: 38px;
         }
         &__text + &__text{
             margin-top: 14px;
@@ -741,27 +764,92 @@ a:hover {
         &__box-left{
             width: 100%;
         }
+        &__advantages-list {
+            padding-right: 48%;
+        }
+        &__advantages-item + &__advantages-item{
+            margin-top: 28px;
+        }
+        &__advantages-title{
+            font-size: 24px;
+        }
+        &__advantages-text{
+            padding-top: 2px;
+        }
     }
     .worck{
         display: block;
+        margin-bottom: 48px;
         &__title{
             width: 100%;
+        }
+        &__text{
+            padding-top: 23px;
+            padding-left: 0;
+            margin-bottom: 37px;
         }
         &__box-right{
             width: 100%;
         }
+        &__item{
+            padding-bottom: 18px;
+        }
+        &__item-title{
+            margin-bottom: 13px;
+        }
     }
+    .portfolio{
+        margin-bottom: 57px;
+        &__title{
+            margin-bottom: 22px;
+        }
+        &__link {
+            font-size: 16px;
+            padding: 14px 12px;
+        }
+    }
+
     .reviews{
+        margin-bottom: 56px;
+        &__item {
+            padding: 8vw 8vw 9vw;
+        }
+        &__item-icon {
+            height: 33px;
+        }
+
+
+        &__title {
+            margin-bottom: 22px;
+        }
+
         &__list{
             grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 332px);
+            gap: 16px;
         }
         &__item{
             max-width: 100%;
+            height: 100%;
         }
     }
     .order{
+        margin-bottom: 63px;
+        &__form-box{
+            padding: 0;
+        }
         &__form{
             padding-right: 0;
+            margin-bottom: 28px;
+        }
+        &__title{
+            margin-bottom: 23px;
+        }
+        &__text{
+            margin-bottom: 32px;
+        }
+        &__input--submit{
+            margin-top: 20px;
         }
     }
     .title-h2{
