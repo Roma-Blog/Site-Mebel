@@ -94,10 +94,18 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   src: local("GT-Super-Display"), url("/fonts/helvetica_regular.woff2") format("woff2"), url("/fonts/helvetica_regular.woff") format("woff");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Helvetica", sans-serif;
   font-size: 16px;
   color: #212529;
+}
+
+.overflow-y-off {
+  overflow-y: hidden;
 }
 
 a:hover {
@@ -133,6 +141,9 @@ a:hover {
   margin-top: 11px;
 }
 .header__menu-mob {
+  display: none;
+}
+.header__box-mob-menu {
   display: none;
 }
 
@@ -476,6 +487,53 @@ a:hover {
   .header__menu-mob {
     display: block;
   }
+  .header__box-mob-menu {
+    display: block;
+    padding: 32px 32px;
+    background-color: #fff;
+    position: fixed;
+    right: -320px;
+    top: 0;
+    text-align: right;
+    overflow-x: hidden;
+    transition: all 0.5s;
+    box-shadow: -1px 10px 10px #646464;
+  }
+  .header__box-mob-menu--open {
+    right: 0;
+  }
+  .header__close-btn {
+    height: 20px;
+    width: 20px;
+    margin-bottom: 16px;
+    background-color: transparent;
+  }
+  .header__close-btn-line {
+    height: 1px;
+    width: 100%;
+    margin-bottom: 32px;
+    background-color: #000;
+    rotate: 45deg;
+  }
+  .header__close-btn-line::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 32px;
+    background-color: #000;
+    rotate: 90deg;
+  }
+  .header__nav-mob {
+    height: 100vh;
+    width: 200px;
+  }
+  .header__nav-mob-item + .header__nav-mob-item {
+    margin-top: 16px;
+  }
+  .header__phon-mob {
+    margin-top: 32px;
+  }
   .header__menu-mob-btn {
     background-color: transparent;
   }
@@ -615,9 +673,6 @@ a:hover {
   }
   .header__menu {
     display: none;
-  }
-  .header__menu-mob {
-    display: block;
   }
   .header__menu-mob-btn {
     background-color: transparent;
