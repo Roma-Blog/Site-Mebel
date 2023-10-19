@@ -204,6 +204,9 @@ a:hover {
   padding-right: 10%;
   line-height: 138%;
 }
+.about-company__title-mob {
+  display: none;
+}
 .about-company__box-left {
   width: 49.3%;
   padding-right: 17%;
@@ -477,8 +480,7 @@ a:hover {
     background-color: transparent;
   }
   .first-screen {
-    grid-template-columns: 1fr;
-    gap: 0;
+    display: block;
   }
   .first-screen__title {
     font-size: 56px;
@@ -582,11 +584,55 @@ a:hover {
   }
 }
 @media (max-width: 580px) {
+  .header {
+    padding-top: 8px;
+  }
+  .header__logo-img {
+    height: 40px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__menu-mob {
+    display: block;
+  }
+  .header__menu-mob-btn {
+    background-color: transparent;
+  }
+  .first-screen {
+    padding-top: 24px;
+    margin-bottom: 54px;
+  }
+  .first-screen__title {
+    margin-bottom: 16px;
+  }
+  .first-screen__text {
+    margin-bottom: 24px;
+  }
+  .first-screen__order {
+    text-align: left;
+    margin-bottom: 28px;
+  }
+  .first-screen__img-1 {
+    height: 70vw;
+    -o-object-position: 0 -105px;
+       object-position: 0 -105px;
+  }
   .about-company {
     display: block;
   }
   .about-company__title {
-    width: 100%;
+    display: none;
+  }
+  .about-company__title-mob {
+    display: block;
+    margin-bottom: 18px;
+  }
+  .about-company__box-text {
+    padding-right: 7px;
+  }
+  .about-company__text + .about-company__text {
+    margin-top: 14px;
   }
   .about-company__box-left {
     width: 100%;
@@ -608,5 +654,8 @@ a:hover {
   }
   .order__form {
     padding-right: 0;
+  }
+  .title-h2 {
+    font-size: 28px;
   }
 }

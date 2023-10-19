@@ -129,7 +129,9 @@ a:hover {
         padding-right: 10%;
         line-height: 138%;
     }
-
+    &__title-mob {
+        display: none;
+    }
     &__box-left {
         width: 49.3%;
         padding-right: 17%;
@@ -511,8 +513,7 @@ a:hover {
 		}
     }
     .first-screen {
-        grid-template-columns: 1fr;
-        gap: 0;
+        display: block;
 		&__title {
             font-size: 56px;
             grid-column-start: 1;
@@ -660,10 +661,82 @@ a:hover {
     }
 }
 @media (max-width: 580px){
+    .header {
+        padding-top: 8px;
+		&__box-logo {
+		}
+
+		&__logo-link {
+		}
+
+		&__logo-img {
+            height: 40px;
+		}
+
+		&__menu {
+            display: none;
+		}
+		&__nav {
+		}
+
+		&__nav-list {
+		}
+
+		&__nav-item {
+		}
+
+		&__nav-link {
+		}
+
+		&__phon {
+		}
+
+		&__phon-link {
+		}
+
+		&__menu-mob {
+            display: block;
+		}
+
+		&__menu-mob-btn {
+            background-color: transparent;
+		}
+
+		&__menu-mob-img {
+		}
+    }
+    .first-screen{
+        padding-top: 24px;
+        margin-bottom: 54px;
+        &__title{
+            margin-bottom: 16px;
+        }
+        &__text{
+            margin-bottom: 24px;
+        }
+        &__order{
+            text-align: left;
+            margin-bottom: 28px;
+        }
+        &__img-1{
+            height: 70vw;
+            object-position: 0 -105px;
+        }
+    }
     .about-company{
         display: block;
         &__title{
-            width: 100%;
+            display: none;
+        }
+        &__title-mob {
+            display: block;
+            margin-bottom: 18px;
+        }
+        &__box-text{
+            padding-right: 7px;
+        }
+        &__text + &__text{
+            margin-top: 14px;
         }
         &__box-left{
             width: 100%;
@@ -690,5 +763,8 @@ a:hover {
         &__form{
             padding-right: 0;
         }
+    }
+    .title-h2{
+        font-size: 28px;
     }
 }
