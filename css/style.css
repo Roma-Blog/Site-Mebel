@@ -52,6 +52,9 @@ button::-moz-focus-inner {
 
 a, a:visited {
   text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 a:hover {
@@ -80,19 +83,19 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: local("Roboto"), url("/fonts/roboto.woff2") format("woff2"), url("/fonts/roboto.woff") format("woff");
+  src: local("Roboto"), url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
 }
 @font-face {
   font-family: "Helvetica";
   font-style: bold;
   font-weight: 700;
-  src: local("GT-Super-Display"), url("/fonts/helvetica_bold.woff2") format("woff2"), url("/fonts/helvetica_bold.woff") format("woff");
+  src: local("GT-Super-Display"), url("../fonts/helvetica_bold.woff2") format("woff2"), url("../fonts/helvetica_bold.woff") format("woff");
 }
 @font-face {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
-  src: local("GT-Super-Display"), url("/fonts/helvetica_regular.woff2") format("woff2"), url("/fonts/helvetica_regular.woff") format("woff");
+  src: local("GT-Super-Display"), url("../fonts/helvetica_regular.woff2") format("woff2"), url("../fonts/helvetica_regular.woff") format("woff");
 }
 html {
   scroll-behavior: smooth;
@@ -413,7 +416,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   padding-bottom: 16px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   align-items: end;
 }
 .footer__copyright {
