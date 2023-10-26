@@ -3,22 +3,22 @@
     font-style: normal;
     font-weight: 400;
     src: local("Roboto"),
-         url("../fonts/roboto.woff2") format("woff2"),
-         url("../fonts/roboto.woff") format("woff");
+         url("./../fonts/roboto.woff2") format("woff2"),
+         url("./../fonts/roboto.woff") format("woff");
 }
 @font-face {
     font-family: "Helvetica";
     font-style: bold;
     font-weight: 700;
     src: local("GT-Super-Display"),
-         url("../fonts/helvetica_bold.woff2") format("woff2"),
-         url("../fonts/helvetica_bold.woff") format("woff");
+         url("./../fonts/helvetica_bold.woff2") format("woff2"),
+         url("./../fonts/helvetica_bold.woff") format("woff");
 }
 @font-face {
     font-family: "Helvetica";
     font-style: normal;
     font-weight: 400;
     src: local("GT-Super-Display"),
-         url("../fonts/helvetica_regular.woff2") format("woff2"),
-         url("../fonts/helvetica_regular.woff") format("woff");
+         url("./../fonts/helvetica_regular.woff2") format("woff2"),
+         url("./../fonts/helvetica_regular.woff") format("woff");
 }
