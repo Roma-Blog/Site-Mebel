@@ -264,6 +264,7 @@ a:hover {
     }
 
     &__link-text {
+        color: #fff;
     }
 
     &__link-icon {
@@ -416,6 +417,9 @@ a:hover {
 }
 .title-h2{
     font-size: 48px;
+}
+input:invalid:focus{
+    border-color: red;
 }
 @media (max-width: 1440px){
 
