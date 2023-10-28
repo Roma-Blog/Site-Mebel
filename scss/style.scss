@@ -418,6 +418,10 @@ a:hover {
 .title-h2{
     font-size: 48px;
 }
+.invalid-input{
+    transition: all 0.2s;
+    border-bottom-color: red;
+}
 
 @media (max-width: 1440px){
 
