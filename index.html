@@ -246,9 +246,11 @@
             <form class="order__form">
                 <input class="order__input order__input--text" placeholder="Имя" type="text" name="name" id="name">
                 <input data-email-input class="order__input order__input--email" placeholder="E-mail" type="email" name="email"
-                    id="email" required>
+                    id="email">
+                <p class="order__text-error order__text-error--email"></p>
                 <input data-tel-input class="order__input order__input--tel" placeholder="Телефон"
-                    type="tel" name="tel" id="tel" required>
+                    type="tel" name="tel" id="tel">
+                <p class="order__text-error order__text-error--tel"></p>
                 <input class="order__input order__input--submit btn" type="submit" value="Отправить заявку">
             </form>
             <ul class="order__download-list">

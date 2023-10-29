@@ -333,7 +333,7 @@ a:hover {
         padding-right: 148px;
         margin-bottom: 40px;
     }
-    &__input + &__input:not(.order__input--submit){
+    &__input:not(.order__input--submit):not(:first-child){
         margin-top: 15px;
     }
     &__input{
@@ -357,6 +357,15 @@ a:hover {
                 background-color: #fff;
             }
         }
+    }
+    &__text-error{
+        font-size: 12px;
+        color: red;
+        margin-bottom: 8px;
+        display: none;
+    }
+    &__text-error-block{
+        display: block;
     }
     &__download-list {
         display: flex;

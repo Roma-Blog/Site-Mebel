@@ -381,7 +381,7 @@ a:hover {
   padding-right: 148px;
   margin-bottom: 40px;
 }
-.order__input + .order__input:not(.order__input--submit) {
+.order__input:not(.order__input--submit):not(:first-child) {
   margin-top: 15px;
 }
 .order__input {
@@ -408,6 +408,15 @@ a:hover {
 .order__input--submit:hover {
   color: #212529;
   background-color: #fff;
+}
+.order__text-error {
+  font-size: 12px;
+  color: red;
+  margin-bottom: 8px;
+  display: none;
+}
+.order__text-error-block {
+  display: block;
 }
 .order__download-list {
   display: flex;

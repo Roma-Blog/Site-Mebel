@@ -89,31 +89,57 @@ for (let phoneInput of phoneInputs) {
 //Validate____________________________________________________________
 const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
 let inputsEmail = document.querySelectorAll('input[data-email-input]')
+let forms = document.querySelectorAll('form')
+
+for (let form of forms) {
+    form.addEventListener('submit', CheckFormValidate)
+
+}
 
 for (let inputEmail of inputsEmail) {
     inputEmail.addEventListener('blur', onInput)
 }
 
+function CheckFormValidate(e){
+    if (!onInput(e.target.querySelector('input[data-email-input]')) || !InputValidateTel(e.target.querySelector('input[data-tel-input]'))){
+        e.preventDefault()
+    }
+}
+
 function InputValidateTel(e){
-    let str = e.target.value
-    if (str[0] == '+'){
-        if (str.length == 18){
-            e.target.classList.remove('invalid-input')
-        }
-        else {
-            e.target.classList.add('invalid-input')
-            e.target.addEventListener('input', InputValidateTel)
-        }
+    if (e.target) e = e.target
+
+    let str = e.value
+    let textError = e.nextElementSibling
+    
+    if(str.length == 0){
+        e.classList.add('invalid-input')
+        e.addEventListener('input', InputValidateTel)
+        textError.classList.add('order__text-error-block')
+        ErrorMessage(textError, 'Введите ваш номер телефона')
+        return false 
     }
-    else if (str[0] == '8'){
-        if (str.length == 17){
-            e.target.classList.remove('invalid-input')
-        }
-        else {
-            e.target.classList.add('invalid-input')
-            e.target.addEventListener('input', InputValidateTel)
-        }
+    else if (str.length == CheckingFirstNum(str[0])){
+        e.classList.remove('invalid-input')
+        textError.classList.remove('order__text-error-block')
+        return true
     }
+    else {
+        e.classList.add('invalid-input')
+        e.addEventListener('input', InputValidateTel)
+        ErrorMessage(textError, 'Номер телефона введен не полностью')
+        return false
+    }
+}
+
+function CheckingFirstNum(num) {
+    if (num == '+') return 18
+    else if (num == '8') return 17
+}
+
+function ErrorMessage(el, text){
+    el.classList.add('order__text-error-block')
+    el.innerHTML = text
 }
 
 function isEmailValid(value) {
@@ -121,11 +147,20 @@ function isEmailValid(value) {
 }
 
 function onInput(e) {
-	if (isEmailValid(e.target.value)) {
-		e.target.classList.remove('invalid-input')
+    if (e.target) e = e.target
+
+    let textError = e.nextElementSibling
+
+	if (isEmailValid(e.value)) {
+		e.classList.remove('invalid-input')
+        textError.classList.remove('order__text-error-block')
+        return true
 	} else {
-		e.target.classList.add('invalid-input')
-        e.target.addEventListener('input', onInput)
+		e.classList.add('invalid-input')
+        if (e.value == '') ErrorMessage(textError, 'Введите ваш e-mail')
+        else ErrorMessage(textError, 'E-mail введен не корректно')
+        e.addEventListener('input', onInput)
+        return false
 	}
 }
 
