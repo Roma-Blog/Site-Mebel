@@ -2,6 +2,7 @@ const btnClose = document.querySelector(".header__close-btn")
 const btnOpen = document.querySelector(".header__menu-mob-btn")
 const mobMenu = document.querySelector(".header__box-mob-menu")
 const body = document.querySelector("body")
+let itemsMobMenu = document.querySelectorAll(".header__nav-mob-link")
 
 btnOpen.addEventListener("click", function () {
     mobMenu.classList.add("header__box-mob-menu--open")
@@ -12,6 +13,13 @@ btnClose.addEventListener("click", function () {
     mobMenu.classList.remove("header__box-mob-menu--open")
     body.classList.remove("overflow-y-off")
 })
+
+for (let item of itemsMobMenu){
+    item.addEventListener('click', function(){
+        mobMenu.classList.remove("header__box-mob-menu--open")
+        body.classList.remove("overflow-y-off")
+    })
+}
 
 //mask-phone_______________________________
 let phoneInputs = document.querySelectorAll('input[data-tel-input]')
